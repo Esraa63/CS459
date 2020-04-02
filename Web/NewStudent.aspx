@@ -12,6 +12,12 @@
         .auto-style2 {
             height: 23px;
         }
+        .auto-style3 {
+            height: 25px;
+        }
+        .auto-style4 {
+            height: 26px;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +33,7 @@
                     <asp:Label ID="Label4" runat="server" Text="First Name"></asp:Label>
                 </td>
                 <td class="auto-style2">
-                    <input id="Text1" type="text" /></td>
+                    <input id="fN" type="text" /></td>
                 <td class="auto-style2"></td>
                 <td class="auto-style2"></td>
                 <td class="auto-style2"></td>
@@ -37,7 +43,7 @@
                     <asp:Label ID="Label5" runat="server" Text="Last Name:"></asp:Label>
                 </td>
                 <td>
-                    <input id="Text2" type="text" /></td>
+                    <input id="lN" type="text" /></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -47,7 +53,7 @@
                     <asp:Label ID="Label6" runat="server" Text="Id"></asp:Label>
                 </td>
                 <td>
-                    <input id="Text3" type="text" /></td>
+                    <input id="iD" type="text" /></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -71,7 +77,7 @@
                     <asp:Label ID="Label8" runat="server" Text="Birthday"></asp:Label>
                 </td>
                 <td>
-                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                    <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -82,7 +88,7 @@
                     <asp:Label ID="Label9" runat="server" Text="Email"></asp:Label>
                 </td>
                 <td>
-                    <input id="Text4" type="text" /></td>
+                    <input id="em" type="text" /></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -92,7 +98,7 @@
                     <asp:Label ID="Label10" runat="server" Text="Phone"></asp:Label>
                 </td>
                 <td>
-                    <input id="Text5" type="text" /></td>
+                    <input id="pho" type="text" /></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -112,7 +118,7 @@
                     <asp:Label ID="Label12" runat="server" Text="Password"></asp:Label>
                 </td>
                 <td>
-                    <input id="Text6" type="text" /></td>
+                    <input id="pass" type="text" /></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -122,7 +128,7 @@
                     <asp:Label ID="Label13" runat="server" Text="Nationality"></asp:Label>
                 </td>
                 <td>
-                    <input id="Text7" type="text" /></td>
+                    <input id="na" type="text" /></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -132,7 +138,7 @@
                     <asp:Label ID="Label14" runat="server" Text="Faculty"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="136px">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px"  Width="136px">
                         <asp:ListItem>Computer Science</asp:ListItem>
                         <asp:ListItem>Pharmacy</asp:ListItem>
                         <asp:ListItem>Engeneering</asp:ListItem>
@@ -143,29 +149,31 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>Bus</td>
-                <td>
+                <td class="auto-style4">Bus</td>
+                <td class="auto-style4">
                     <asp:CheckBox ID="CheckBox1" runat="server" />
                 </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style4"></td>
+                <td class="auto-style4"></td>
+                <td class="auto-style4"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Submit" />
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style3"></td>
+                <td class="auto-style3">
+                    <asp:Label ID="msg" runat="server" Text=""></asp:Label>
+                </td>
+                <td class="auto-style3"></td>
+                <td class="auto-style3"></td>
+                <td class="auto-style3"></td>
             </tr>
         </table>
     

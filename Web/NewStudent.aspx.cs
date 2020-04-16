@@ -12,19 +12,19 @@ protected void Button1_Click(object sender, EventArgs e)
 {
     SqlConnection conn = new SqlConnection();
     conn.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|WbeDB.mdf;Integrated Security=True";
-    string strInsert = "INSERT INTO [dbo].[Student]" + "VALUES('" + iD.Text + "', '"
+    string strInsert = "INSERT INTO [dbo].[Student] " + " VALUES('" 
             + fN.Text + "', '"
             + lN.Text + "', '"
+            + iD.Text + "', '"
             + RadioButtonList1.SelectedValue + "', '"
             + Calendar1.SelectedDate + "', '"
             + em.Text + "', '"
             + pho.Text + "', '"
-            + TextArea1.Text + "', '"
+            + add.Text + "', '"
             + pass.Text + "', '"
             + na.Text + "', '"
             + DropDownList1.SelectedValue + "', '"
             + CheckBox1.Text + "')";
-
     SqlCommand cmdInsert = new SqlCommand(strInsert, conn);
     try
     {
